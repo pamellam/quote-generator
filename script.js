@@ -2,14 +2,14 @@ const quoteContainer = document.getElementById('quote-container');
 const quoteText = document.getElementById('quote');
 const authorText = document.getElementById('author');
 const twitterBtn = document.getElementById('twitter');
-const instagramBtn = document.getElementById('instagram');
 const newQuoteBtn = document.getElementById('new-quote');
+const shareBtn = document.getElementById('copy');
 const loader = document.getElementById('loader');
 
 let apiQuotes = [];
 
 // Show loading
-function loading() {
+function showLoading() {
   loader.hidden = false;
   quoteContainer.hidden = true;
 }
@@ -22,7 +22,7 @@ function complete() {
 
 // Show new quotes dynamically
 function newQuote() {
-  loading();
+  showLoading();
   // pick a random quote from apiQuotes array
   const quotes = apiQuotes[Math.floor(Math.random() * apiQuotes.length)];
   // check if author field is blank and replace it with 'Unknown'
@@ -49,7 +49,7 @@ function newQuote() {
 
 // Get Quotes from API
 async function getQuotes() {
-  loading();
+  showLoading();
 
   const apiUrl = 'https://jacintodesign.github.io/quotes-api/data/quotes.json';
 
@@ -70,9 +70,30 @@ function tweetQuote() {
   window.open(twitterUrl, '_blank');
 }
 
+// Format and copy the current quote to the clipboard
+function copyToClipboard() {
+  const quote = quoteText.textContent;
+  const author = authorText.textContent;
+
+  const formattedText = `"${quote}" - ${author}`;
+
+  const tempElement = document.createElement('textarea');
+  tempElement.value = formattedText;
+
+  navigator.clipboard
+    .writeText(formattedText) // Use formattedText instead of combinedText
+    .then(() => {
+      alert('Quote copied to clipboard!');
+    })
+    .catch((err) => {
+      console.error('Unable to copy to clipboard', err);
+    });
+}
+
 // Event Listeners
 newQuoteBtn.addEventListener('click', newQuote);
 twitterBtn.addEventListener('click', tweetQuote);
+shareBtn.addEventListener('click', copyToClipboard);
 
 // On Load
 getQuotes();

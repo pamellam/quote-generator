@@ -1,0 +1,38 @@
+# Node.js
+node_modules/
+
+# Dependency directories
+jspm_packages/
+
+# User-specific files
+npm-debug.log
+yarn-error.log
+yarn.lock
+
+# Testing
+coverage/
+
+# Build files
+build/
+dist/
+
+# Logs
+logs/
+*.log
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Editor directories and files
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+
+# Environment
+.env
+.env.local
+.env.development
+.env.test
+.env.production

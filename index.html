@@ -4,7 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Quote Generator</title>
-  <link rel="icon" type="image/png" href="https://www.google.com/s2/favicons?domain=jacinto.design">
+  <link rel="icon" type="image/png" href="https://fontawesome.com/icons/quote-left?style=solid">
+  <link href="data:image/x-icon;base64,AAABAAEAEBAQAAEABAAoAQAAFgAAACgAAAAQAAAAIAAAAAEABAAAAAAAgAAAAAAAAAAAAAAAEAAAAAAAAAD9/f0AAAAAABcXFwBlZWUA////ABgYGADLy8sA8vLyAFNTUwD09PQA1tbWAAAAAAAAAAAAAAAAAAAAAAAAAAAAERERERERERERERERERERERERERERERERERREQQREYRERFERFRERBEREUREVEREERERRERUREQRERFERBRERBEREUoRFEERERERQhEUQRERERFEERdBERERETRJEURBERERGEcRFEEREREREREREREREREREREREREREREREREREAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" rel="icon" type="image/x-icon">
+  <!-- <link rel="icon" type="image/png" href="https://www.google.com/s2/favicons?domain=jacinto.design"> -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
   <link rel="stylesheet" href="style.css">
 </head>
@@ -24,7 +26,12 @@
       <button class="twitter-button" id="twitter" tittle="Tweet this!">
         <i class="fa-brands fa-x-twitter"></i>
       </button>
-      <button id="new-quote">New Quote</button>
+      <button class="copy-button" id="copy" tittle="Copy the quote to the clipboard."">
+        <i class="fa-solid fa-copy"></i>      
+      </button>
+      <button class="refresh" id="new-quote" tittle="Load new quote">
+        <i class="fas fa-sync-alt"></i>
+      </button>
     </div>
   </div>
   <!-- Loader -->

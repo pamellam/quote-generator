@@ -36,6 +36,9 @@ body {
 
 .fa-quote-left {
   font-size: 4rem;
+  display: block;
+  margin: auto;
+  text-align: center;
 }
 
 .quote-author {
@@ -65,17 +68,12 @@ button {
 }
 
 button:hover {
-  filter: brightness(110%);
+  filter: brightness(180%);
 }
 
 button:active {
   transform: translate(0, 0.3rem);
   box-shadow: 0 0.1rem rgba(255, 255, 255, 0.65);
-}
-
-.twitter-button:hover {
-  background: rgba(41, 46, 50, 0.1); 
-  color: #1e3050;
 }
 
 .fa-twitter {
