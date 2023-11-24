@@ -13,7 +13,6 @@ function showLoadingSpinner() {
   quoteContainer.hidden = true;
 }
 
-
 function removeLoadingSpinner() {
   quoteContainer.hidden = false;
   loader.hidden = true;
